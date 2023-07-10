@@ -32,7 +32,7 @@ Add code that tells the game what to do when mama reaches her baby.
 ---
 
 - :paper plane:  From ``||sprites:Sprites||``, grab
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     otherSprite.destroy()
 })
@@ -55,7 +55,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     otherSprite.destroy()
 })
@@ -71,7 +71,7 @@ Add a point to your score each time you save a baby.
 ---
 
 - :id card:  From ``||info:Info||``, grab
-```block
+```spy
 info.changeScoreBy(1)
 ```
 and snap it in at **the end** of the<br/>
@@ -90,7 +90,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     otherSprite.destroy()
     //@highlight
@@ -123,7 +123,7 @@ Let's add a countdown timer.
 ---
 
 - :id card:  From ``||info:Info||``,  choose the
-```block
+```spy
 info.startCountdown(15)
 ```
 and snap it into the end of the<br/>
@@ -141,7 +141,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`Freeway`)
 let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
 controller.moveOnlyOnscreenWithArrows(mamaDino, controller.Speeds.Fast)
@@ -160,7 +160,7 @@ Right now, when time runs out, you lose the game. We can change that!
 ---
 
 - :id card:  From ``||info:Info||``,  grab
-```block
+```spy
 info.onCountdownEnd(function () {
     game.over(true)
 })
@@ -185,7 +185,7 @@ info.onCountdownEnd(function () {
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 info.onCountdownEnd(function () {
     game.over(true)
 })
