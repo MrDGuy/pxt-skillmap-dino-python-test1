@@ -28,7 +28,7 @@ Let's add a new kind of projectile, an ``||sprites:Enemy||``!
 ---
 
 - :redo:  From the ``||loops:Loops|`` category, grab
-```block
+```spy
 forever(function () {
     let tourist = sprites.createProjectileFromSide(img`.`, -90, 0)
     tourist.setKind(SpriteKind.Enemy)
@@ -54,7 +54,7 @@ forever(function () {
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 forever(function () {
 //@highlight
     let tourist = sprites.createProjectileFromSide(assets.image`Tourist`, -90, 0)
@@ -72,7 +72,7 @@ We still have to set the vertical positions on the screen.
 ---
 
 - :paper plane:  From ``||sprites:Sprites||``, grab
-```block
+```spy
 let tourist: Sprite = null
 tourist.y = randint(15, 115)
 ```
@@ -82,7 +82,7 @@ This causes our ``||sprites(noclick):Enemy||`` sprites to start at a different h
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 forever(function () {
     let tourist = sprites.createProjectileFromSide(assets.image`Tourist`, -90, 0)
     //@highlight
@@ -112,7 +112,7 @@ What are we going to do about it?
 
 
 - :paper plane:  From ``||sprites:Sprites||``, grab
-```block
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
     info.changeLifeBy(-1)
@@ -132,7 +132,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
     //@highlight
