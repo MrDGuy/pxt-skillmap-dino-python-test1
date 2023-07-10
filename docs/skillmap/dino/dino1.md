@@ -327,13 +327,7 @@ This will create a new baby dino every second (1000ms) at a random starting heig
 hint~
 
 
-```blockconfig.local
-forever(function () {
-    let babyDino = sprites.createProjectileFromSide(img`.`, -90, 0)
-    babyDino.y = randint(15, 115)
-    pause(1000)
-})
-```
+
 
 #### ~ tutorialhint
 
@@ -384,12 +378,7 @@ hint~
 Click **Done** to return to the main map so you can keep going to add points and a game timer!
 
 
-```blockconfig.global
-let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
-let babyDino = sprites.createProjectileFromSide(assets.image`Baby`, -90, 0)
-scroller.scrollBackgroundWithSpeed(-50, 0)
-babyDino.y = 0
-```
+
 
 
 
