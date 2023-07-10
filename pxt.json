@@ -8,6 +8,7 @@
     "files": [
         "README.md",
         "docs/skillmap/dino.md",
+        "docs/skillmap/dino-test.md",
         "_locales/fr/skillmap.md",
         "docs/skillmap/dino/dino1.md",
         "docs/skillmap/dino/dino2.md",
