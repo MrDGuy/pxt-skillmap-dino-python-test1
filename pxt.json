@@ -7,14 +7,9 @@
     },
     "files": [
         "README.md",
-        "docs/skillmap/dino.md",
         "docs/skillmap/dino-test.md",
         "_locales/fr/skillmap.md",
-        "docs/skillmap/dino/dino1.md",
-        "docs/skillmap/dino/dino2.md",
-        "docs/skillmap/dino/dino3.md",
-        "docs/skillmap/dino/dino4.md",
-        "docs/skillmap/educator-info/dino-map-info.md"
+        "docs/skillmap/dino/dino1.md"
     ],
     "testFiles": [
     ],
