@@ -21,8 +21,10 @@ Let's create a game where you help Mama Dino rescue her hoard of babies!
 
 - :tree:  From the ``||scene:Scene||`` category in the toolbox,
 grab
-```spy
-scene.setBackgroundImage(img`.`)
+```python
+scene.set_background_image(img("""
+    .
+"""))
 ```
 and drag it into the empty<br/>
 ``||loops(noclick):on start||``<br/>
@@ -42,9 +44,11 @@ hint~
 
 #### ~ tutorialhint
 
-```spy
+```python
 //@highlight
-scene.setBackgroundImage(img`.`)
+scene.set_background_image(img("""
+    .
+"""))
 ```
 
 
@@ -54,8 +58,10 @@ scene.setBackgroundImage(img`.`)
 
 
 - :paint brush:  Click the empty grey square inside
-```spy
-scene.setBackgroundImage(img`.`)
+```python
+scene.set_background_image(img("""
+    .
+"""))
 ```
 to open the **image editor**. <br/><br/>
 You can draw your own background or choose the freeway from the **Gallery**.
@@ -73,9 +79,9 @@ hint~
 
 #### ~ tutorialhint
 
-```spy
+```python
 //@highlight
-scene.setBackgroundImage(sprites.background.cityscape2)
+scene.set_background_image(sprites.background.cityscape2)
 ```
 
 
@@ -115,8 +121,10 @@ hint~
 ---
 
 - :paper plane: From the ``||sprites: Sprites||`` category **in the toolbox**, grab
-```spy
-let mamaDino = sprites.create(img`.`, SpriteKind.Player)
+```python
+mamaDino = sprites.create(img("""
+    .
+"""), SpriteKind.player)
 ```
 and snap it in at **the bottom** of the ``||loops(noclick): on start||`` block already in the workspace.
 
@@ -132,10 +140,12 @@ hint~
 
 #### ~ tutorialhint
 
-```spy
-scene.setBackgroundImage(sprites.background.cityscape2)
+```python
+scene.set_background_image(sprites.background.cityscape2)
 //@highlight
-let mamaDino = sprites.create(img`.`, SpriteKind.Player)
+mamaDino = sprites.create(img("""
+    .
+"""), SpriteKind.player)
 ```
 
 
@@ -143,8 +153,10 @@ let mamaDino = sprites.create(img`.`, SpriteKind.Player)
 ## {Step 6}
 
 - :paint brush: Click the empty image box inside
-```spy
-let mamaDino = sprites.create(img`.`, SpriteKind.Player)
+```python
+mamaDino = sprites.create(img("""
+    .
+"""), SpriteKind.player)
 ```
 to open the
 image editor and click the **My Assets** tab.
@@ -169,10 +181,12 @@ hint~
 
 #### ~ tutorialhint
 
-```spy
-scene.setBackgroundImage(sprites.background.cityscape2)
+```python
+scene.set_background_image(sprites.background.cityscape2)
 //@highlight
-let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
+mamaDino = sprites.create(assets.image("""
+    Mama
+"""), SpriteKind.player)
 ```
 
 ## {7. Look at Your Game}
@@ -192,8 +206,8 @@ You should see Mama Dino in the middle of the screen.
 
 
 - :game: From the ``||controller: Controller||`` category, grab
-```spy
-controller.moveOnlyOnscreenWithArrows(mamaDino, controller.Speeds.Fast)
+```python
+controller.move_only_onscreen_with_arrows(mamaDino, controller.Speeds.FAST)
 ```
 and snap it in at **the end** of the<br/>
 ``||loops(noclick): on start||`` <br/>
@@ -210,11 +224,13 @@ hint~
 
 #### ~ tutorialhint
 
-```spy
-scene.setBackgroundImage(sprites.background.cityscape2)
-let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
+```python
+scene.set_background_image(sprites.background.cityscape2)
+mamaDino = sprites.create(assets.image("""
+    Mama
+"""), SpriteKind.player)
 //@highlight
-controller.moveOnlyOnscreenWithArrows(mamaDino, controller.Speeds.Fast)
+controller.move_only_onscreen_with_arrows(mamaDino, controller.Speeds.FAST)
 
 ```
 
@@ -239,8 +255,8 @@ Make it look like the dino is walking along the road.
 ---
 
 - :arrows alternate:  Go to ``||scroller:Scroller||`` and drag
-```spy
-scroller.scrollBackgroundWithSpeed(-50, 0)
+```python
+scroller.scroll_background_with_speed(-50, 0)
 ```
 into **the end**
 of the ``||loops(noclick):on start||`` container.
@@ -256,12 +272,14 @@ hint~
 
 #### ~ tutorialhint
 
-```spy
-scene.setBackgroundImage(assets.image`Freeway`)
-let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
-controller.moveOnlyOnscreenWithArrows(mamaDino, controller.Speeds.Fast)
+```python
+scene.set_background_image(sprites.background.cityscape2)
+mamaDino = sprites.create(assets.image("""
+    Mama
+"""), SpriteKind.player)
+controller.move_only_onscreen_with_arrows(mamaDino, controller.Speeds.FAST)
 //@highlight
-scroller.scrollBackgroundWithSpeed(-50, 0)
+scroller.scroll_background_with_speed(-50, 0)
 ```
 
 
@@ -282,12 +300,14 @@ Let's add some baby dinos for Mama to rescue 💚
 ---
 
 - :redo:  From ``||loops:Loops||``, grab the
-```spy
-forever(function () {
-    let babyDino = sprites.createProjectileFromSide(img`.`, -90, 0)
+```python
+def on_forever():
+    babyDino = sprites.create_projectile_from_side(img("""
+        .
+    """), -90, 0)
     babyDino.y = randint(15, 115)
     pause(1000)
-})
+forever(on_forever)
 ```
 bundle and drag it into an empty spot on the workspace.
 
@@ -317,13 +337,13 @@ forever(function () {
 
 #### ~ tutorialhint
 
-```spy
+```python
 //@highlight
-forever(function () {
-    let babyDino = sprites.createProjectileFromSide(assets.image`Baby`, -90, 0)
+def on_forever():
+    babyDino = sprites.create_projectile_from_side(assets.image("""Baby"""), -90, 0)
     babyDino.y = randint(15, 115)
     pause(1000)
-})
+forever(on_forever)
 
 ```
 
