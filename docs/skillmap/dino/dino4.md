@@ -30,7 +30,7 @@ Let's animate Mama Dino!
 
 
 - :sync: From ``||animation:Animation||`` , drag
-```block
+```spy
 animation.runImageAnimation(mamaDino, [img`.`], 100, true)
 ```
 into **the bottom** of the
@@ -39,7 +39,7 @@ into **the bottom** of the
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`Freeway`)
 scroller.scrollBackgroundWithSpeed(-50, 0)
 let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
@@ -64,7 +64,7 @@ animation.runImageAnimation(mamaDino, [img`.`], 100, true)
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`Freeway`)
 scroller.scrollBackgroundWithSpeed(-50, 0)
 let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
@@ -95,7 +95,7 @@ You can follow the same steps to animate the baby.
 ---
 
 - :sync:  From ``||animation:Animation||``, drag
-```block
+```spy
 animation.runImageAnimation(babyDino, [img`.`], 100, true)
 ```
 into the ``||loops(noclick):forever||`` loop where your main
@@ -112,7 +112,7 @@ animation.runImageAnimation(babyDino, img`.`, 100, true)
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 forever(function () {
    let babyDino = sprites.createProjectileFromSide(assets.image`Baby`, -90, 0)
     babyDino.y = randint(0, 120)
@@ -148,7 +148,7 @@ Now you can do the same thing for your enemy sprite!<br/>
 ---
 
 - :sync: From ``||animation:Animation||``, drag
-```block
+```spy
 animation.runImageAnimation(tourist, img`.`, 100, true)
 ```
 into the ``||loops(noclick):forever||`` loop where
@@ -165,7 +165,7 @@ animation.runImageAnimation(tourist, img`.`, 100, true)
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 forever(function () {
     let tourist = sprites.createProjectileFromSide(assets.image`Tourist`, -90, 0)
     tourist.y = randint(0, 120)
