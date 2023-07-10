@@ -21,7 +21,7 @@ Let's create a game where you help Mama Dino rescue her hoard of babies!
 
 - :tree:  From the ``||scene:Scene||`` category in the toolbox,
 grab
-```block
+```spy
 scene.setBackgroundImage(img`.`)
 ```
 and drag it into the empty<br/>
@@ -42,7 +42,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 //@highlight
 scene.setBackgroundImage(img`.`)
 ```
@@ -54,7 +54,7 @@ scene.setBackgroundImage(img`.`)
 
 
 - :paint brush:  Click the empty grey square inside
-```block
+```spy
 scene.setBackgroundImage(img`.`)
 ```
 to open the **image editor**. <br/><br/>
@@ -73,7 +73,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 //@highlight
 scene.setBackgroundImage(sprites.background.cityscape2)
 ```
@@ -115,7 +115,7 @@ hint~
 ---
 
 - :paper plane: From the ``||sprites: Sprites||`` category **in the toolbox**, grab
-```block
+```spy
 let mamaDino = sprites.create(img`.`, SpriteKind.Player)
 ```
 and snap it in at **the bottom** of the ``||loops(noclick): on start||`` block already in the workspace.
@@ -132,7 +132,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(sprites.background.cityscape2)
 //@highlight
 let mamaDino = sprites.create(img`.`, SpriteKind.Player)
@@ -143,7 +143,7 @@ let mamaDino = sprites.create(img`.`, SpriteKind.Player)
 ## {Step 6}
 
 - :paint brush: Click the empty image box inside
-```block
+```spy
 let mamaDino = sprites.create(img`.`, SpriteKind.Player)
 ```
 to open the
@@ -169,7 +169,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(sprites.background.cityscape2)
 //@highlight
 let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
@@ -192,7 +192,7 @@ You should see Mama Dino in the middle of the screen.
 
 
 - :game: From the ``||controller: Controller||`` category, grab
-```block
+```spy
 controller.moveOnlyOnscreenWithArrows(mamaDino, controller.Speeds.Fast)
 ```
 and snap it in at **the end** of the<br/>
@@ -210,7 +210,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(sprites.background.cityscape2)
 let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
 //@highlight
@@ -239,7 +239,7 @@ Make it look like the dino is walking along the road.
 ---
 
 - :arrows alternate:  Go to ``||scroller:Scroller||`` and drag
-```block
+```spy
 scroller.scrollBackgroundWithSpeed(-50, 0)
 ```
 into **the end**
@@ -256,7 +256,7 @@ hint~
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`Freeway`)
 let mamaDino = sprites.create(assets.image`Mama`, SpriteKind.Player)
 controller.moveOnlyOnscreenWithArrows(mamaDino, controller.Speeds.Fast)
@@ -282,7 +282,7 @@ Let's add some baby dinos for Mama to rescue 💚
 ---
 
 - :redo:  From ``||loops:Loops||``, grab the
-```block
+```spy
 forever(function () {
     let babyDino = sprites.createProjectileFromSide(img`.`, -90, 0)
     babyDino.y = randint(15, 115)
@@ -317,7 +317,7 @@ forever(function () {
 
 #### ~ tutorialhint
 
-```blocks
+```spy
 //@highlight
 forever(function () {
     let babyDino = sprites.createProjectileFromSide(assets.image`Baby`, -90, 0)
