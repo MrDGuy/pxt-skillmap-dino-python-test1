@@ -23,7 +23,6 @@
 * url: /skillmap/dino/dino1
 * imageUrl: /static/skillmap/dino/dino1.gif
 * tags: easy, collector, game
-* next: dino2
 * position: 0 0
 
 
